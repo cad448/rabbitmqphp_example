@@ -23,11 +23,17 @@ function SendLoginRequest(username,password)
 	}
 	request.send("type=login&uname="+username+"&pword="+password);
 }
+
+	function loginUser() { 
+		  var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            SendLoginRequest(username, password);
+	} 
 </script>
 
 <h1>login</h1>
 <body>
-<form>
+<form id = "loginForm">
     <label for="username">Username:</label><br>
     <input type="text" id="username" name="username"><br>
     <label for="password">Password:</label><br>
@@ -39,7 +45,7 @@ awaiting response
 </div>
 	
 <script>
-	/*SendLoginRequest("kehoed","12345");*/
+
 </script>
 </body>
 </html>
